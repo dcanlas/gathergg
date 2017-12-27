@@ -10,8 +10,13 @@
   "author": "Dom",
   "license": "ISC",
   "dependencies": {
+    "history": "^4.7.2",
+    "material-ui": "^0.20.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
+    "react-redux": "^5.0.6",
+    "react-router-dom": "^4.2.2",
+    "redux": "^3.7.2",
     "webpack": "^3.10.0",
     "webpack-dev-server": "^2.9.7"
   },
@@ -27,6 +32,8 @@
     "css-loader": "^0.28.7",
     "less": "^2.7.3",
     "less-loader": "^4.0.5",
+    "node-sass": "^4.7.2",
+    "sass-loader": "^6.0.6",
     "style-loader": "^0.19.1"
   },
   "babel": {

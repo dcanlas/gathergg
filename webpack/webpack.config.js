@@ -4,6 +4,7 @@ var path = require('path');
 var parentDir = path.join(__dirname, '../');
 
 module.exports = {
+    devtool: 'cheap-module-source-map',
     entry: [
         path.join(parentDir, 'index.js')
     ],
@@ -19,11 +20,15 @@ module.exports = {
         ]
     },
     output: {
-        path: parentDir,
-        filename: 'bundle.js'
+        path: parentDir + '/dist',
+        filename: 'bundle.js',
+        publicPath: '/static/'
     },
-    devServer: {
-        contentBase: parentDir,
-        historyApiFallback: true
-    }
+    plugins: [
+      new webpack.DefinePlugin({
+        'process.env': {
+          'NODE_ENV': JSON.stringify('production')
+        }
+      })
+    ]
 }
